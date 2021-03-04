@@ -8,7 +8,7 @@ class AvatarController extends Controller
 {
     public function index()
     {
-
+        return view('pages.avatars.index');
     }
 
     /**
@@ -17,6 +17,7 @@ class AvatarController extends Controller
     public function create()
     {
 
+        return view('pages.avatars.create');
     }
 
     public function store()

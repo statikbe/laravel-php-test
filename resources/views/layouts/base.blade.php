@@ -6,6 +6,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Laravel Test">
+
+    <title>Laravel </title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -38,7 +41,7 @@
             <div class="container">
                 <div class="flex flex-justify-center">
                     <a href="{{route('home.index')}}" class="page-header__logo">
-                        <img src="{{ url('/') }}/img/logo.png" alt="logo">
+                        LOGO
                     </a>
                 </div>
             </div>

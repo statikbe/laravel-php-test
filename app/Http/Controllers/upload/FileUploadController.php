@@ -10,7 +10,7 @@ class FileUploadController extends Controller
     public function index()
     {
 
-        return view('pages.file-upload');
+        return view('pages.files.index');
 
     }
 
