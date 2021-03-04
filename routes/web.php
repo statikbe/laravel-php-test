@@ -19,6 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home.index');
 
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
 Route::group([
     'middleware' => ['web'],
     'prefix' => 'medewerkers'
@@ -35,3 +42,7 @@ Route::group([
     Route::get('aanmaken', [AvatarController::class, 'create'])->name('file.avatar.create');
     Route::post('aanmaken', [AvatarController::class, 'store'])->name('file.avatar.store');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
