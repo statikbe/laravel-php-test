@@ -8,6 +8,6 @@ class MeetingRoomController extends Controller
 {
     public function index()
     {
-        
+
     }
 }
