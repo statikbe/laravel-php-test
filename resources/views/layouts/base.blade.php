@@ -44,6 +44,7 @@
                         LOGO
                     </a>
                 </div>
+                @include('partials.menu')
             </div>
         </div>
 

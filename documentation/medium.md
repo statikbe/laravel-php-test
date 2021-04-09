@@ -1,5 +1,6 @@
 ## File upload
-Schrijf een file upload zodat je medewerkers een profielfoto kan geven.
+Schrijf een file upload zodat je medewerkers van een profielfoto kan voorzien.
+Dit gebeurt op basis van medewerker keuze en dan een file upload.
 
 Hiervoor werd al een controller en template voorzien.
 - FileUploadController

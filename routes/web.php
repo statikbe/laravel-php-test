@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\avatar\AvatarController;
+use App\Http\Controllers\BugController;
+use App\Http\Controllers\meetings\MeetingRoomController;
+use App\Http\Controllers\meetings\ScheduledMeetingController;
 use App\Http\Controllers\upload\FileUploadController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +29,8 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+Route::get('bug', [BugController::class, 'index'])->name('bug.index');
+
 Route::group([
     'middleware' => ['web'],
     'prefix' => 'medewerkers'
@@ -41,6 +46,14 @@ Route::group([
     Route::get('overzicht', [AvatarController::class, 'index'])->name('file.avatar.index');
     Route::get('aanmaken', [AvatarController::class, 'create'])->name('file.avatar.create');
     Route::post('aanmaken', [AvatarController::class, 'store'])->name('file.avatar.store');
+});
+
+Route::group([
+   'middleware' => ['web'],
+   'prefix' => 'meetings',
+], function() {
+    Route::get('overzicht', [MeetingRoomController::class, 'index'])->name('meeting.room.index');
+    Route::get('{meetingRoom}/overzicht', [ScheduledMeetingController::class, 'index'])->name('scheduled.meeting.index');
 });
 
 Route::get('/dashboard', function () {

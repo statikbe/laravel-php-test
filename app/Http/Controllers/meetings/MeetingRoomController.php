@@ -6,4 +6,8 @@ use App\Http\Controllers\Controller;
 
 class MeetingRoomController extends Controller
 {
+    public function index()
+    {
+        
+    }
 }
