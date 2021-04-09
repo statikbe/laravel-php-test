@@ -11,7 +11,8 @@
 
 ### Initiële setup
 - Zet het project op in je lokale development omgeving.
-- Doe de nodige setup (`key:generate`, `migrate`, etc.)
+- Doe de nodige setup (`key:generate`, `migrate`, `db:seed` .)
+- Bovenstaande zal al een paar zaken klaarzetten die je nodig hebt.
 
 
 ### Setup Bugfix pagina
