@@ -8,4 +8,7 @@
     <li>
         <a href="{{ route('meeting.room.index') }}">Meeting planner</a>
     </li>
+    <li>
+        <a href="{{ route('employee.index') }}">Employees</a>
+    </li>
 </ul>
