@@ -67,18 +67,18 @@
     <main>
         <h1>Scheduled meetings</h1>
         <section class="meeting-container">
-            @foreach($data as $item)
+            @foreach($data as $item
                 <div class="meeting">
                     <div>
-                        <h2>{{ $item['scheduled_meeting']['meeting']['title'] }}</h2>
-                        <p class="date">{{ date_format(date_create($item['scheduled_meeting']['meeting']['date_start']), 'd/m/Y H:i') }} - {{ date_format(date_create($item['scheduled_meeting']['meeting']['date_stop']), 'H:i') }}</p>
+                        <h2>{{ $item['meting']['title'] }}</h2>
+                        <p class="date">{{ date_format(date_create($item['meeting']['date_start']), 'd/m/Y H:i') }} - {{ date_format(date_create($item['meeting']['date_stop']), 'H:i') }}</p>
                     </div>
-                    <p>Description: {{ $item['scheduled_meeting']['meeting']['description'] }}</p>
-                    <p>{{ $item['scheduled_meeting']['meeting']['meeting_room']['name'] }}</p>
-                    <p>Organizer: {{ $item['scheduled_meeting']['meeting']['organizer']['first_name'] }} {{ $item['scheduled_meeting']['meeting']['organizer']['last_name'] }}</p>
-                    <p class="attendees attendees{{ $item['scheduled_meeting']['meeting']['id'] }}">Attendees ↓</p>
-                    <ul class="list{{ $item['scheduled_meeting']['meeting']['id'] }} hidden">
-                        @foreach($item['scheduled_meeting']['attendees'] as $attendee)
+                    <p>Description: {{ $item['meeting']}}</p>
+                    <p>{{ $item['meeting']['meeting_room']['name'] }}</p>
+                    <p>Organizer: {{ $item['meeting']['organizer']['first_name'] }} {{ $item['meeting']['organizer']['last_name'] }}</p>
+                    <p class="attendees attendees{{ $item['meeting']['id'] }}">Attendees ↓</p>
+                    <ul class="list{{ $item['meeting']['id'] }} hidden">
+                        @foreach($item['attendees'] as $attendee)
                         <li>{{ $attendee['employee']['first_name'] }} {{ $attendee['employee']['last_name'] }}</li>
                         @endforeach
                     </ul>

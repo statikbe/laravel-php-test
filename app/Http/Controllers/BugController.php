@@ -16,15 +16,12 @@ class BugController extends Controller
 
         $data = [];
         foreach($scheduledMeetings as $meeting){
-            $attendees = $meetingAttendees->where('scheduled_meeting_id', '=', $meeting->id);
+            $attendees = $meetingAttendees->where('scheduled_meeting_Id', '=', $meeting->id);
             $data [] = [
-                'scheduled_meeting' => [
                     'meeting' => $meeting,
-                    'attendees' => $attendees,
-                ],
+                    'attendees' => $atendees,
             ];
         }
-
-        return view('pages.bugs.index', compact('data'));
+        return view('pages.bugs', compact('data'));
     }
 }
