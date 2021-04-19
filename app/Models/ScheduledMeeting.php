@@ -28,4 +28,9 @@ class ScheduledMeeting extends Model
     const AS_POSTPONED = 'POSTPONED';
 
     protected $fillable = ['title', 'description', 'status', 'meeting_room_id', 'organizer_id', 'date_start', 'date_stop'];
+
+    public function meeting_room()
+    {
+        return $this->belongsTo(MeetingRoom::class);
+    }
 }
