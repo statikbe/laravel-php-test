@@ -33,4 +33,9 @@ class ScheduledMeeting extends Model
     {
         return $this->belongsTo(MeetingRoom::class);
     }
+
+    public function organizer()
+    {
+        return $this->belongsTo(Employee::class);
+    }
 }
