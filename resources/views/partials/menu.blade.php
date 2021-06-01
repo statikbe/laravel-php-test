@@ -1,13 +1,34 @@
-<nav class="bg-white shadow dark:bg-gray-800">
-    <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
-        <a href="{{ route('home.index') }}" class="text-gray-800 dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">home</a>
+<style>
+    #navbar ul {
+        margin: 0;
+        padding: 5px;
+        list-style-type: none;
+        text-align: center;
+        background-color: whitesmoke;
+    }
 
-        <a href="{{ route('bug.index') }}" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Bug finder</a>
+    #navbar ul li {
+        display: inline;
+    }
 
-        <a href="{{ route('file.avatar.index') }}" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Avatar</a>
+    #navbar ul li a {
+        text-decoration: none;
+        padding: .2em 1em;
+        color: black;
+        background-color: whitesmoke;
+    }
 
-        <a href="{{ route('meeting.room.index') }}" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Meeting planner</a>
-
-        <a href="{{ route('employee.index') }}" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6">Employees</a>
-    </div>
-</nav>
+    #navbar ul li a:hover {
+        color: whitesmoke;
+        background-color: black;
+    }
+</style>
+<div id="navbar">
+    <ul>
+        <li><a href="{{ route('home.index') }}">home</a></li>
+        <li><a href="{{ route('bug.index') }}" >Bug finder</a></li>
+        <li><a href="{{ route('file.avatar.index') }}">Avatar</a></li>
+        <li><a href="{{ route('meeting.room.index') }}">Meeting planner</a></li>
+        <li><a href="{{ route('employee.index') }}">Employees</a></li>
+    </ul>
+</div>
