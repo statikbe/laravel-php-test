@@ -4,7 +4,7 @@
         padding: 5px;
         list-style-type: none;
         text-align: center;
-        background-color: whitesmoke;
+        background-color: white;
     }
 
     #navbar ul li {
@@ -15,11 +15,11 @@
         text-decoration: none;
         padding: .2em 1em;
         color: black;
-        background-color: whitesmoke;
+        background-color: white;
     }
 
     #navbar ul li a:hover {
-        color: whitesmoke;
+        color: white;
         background-color: black;
     }
 </style>
