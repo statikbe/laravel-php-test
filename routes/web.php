@@ -3,6 +3,7 @@
 use App\Http\Controllers\avatar\AvatarController;
 use App\Http\Controllers\BugController;
 use App\Http\Controllers\employee\EmployeeController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\meetings\MeetingRoomController;
 use App\Http\Controllers\meetings\ScheduledMeetingController;
 use App\Http\Controllers\upload\FileUploadController;
@@ -19,9 +20,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home.index');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('documentation/{level}', [HomeController::class, 'level'])->name('home.level');
 
 Route::get('/employees', [EmployeeController::class, 'index'])->name('employee.index');
 

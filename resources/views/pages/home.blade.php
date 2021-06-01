@@ -8,6 +8,6 @@
 @endsection
 
 @section('content_body')
-
+   {!! \Illuminate\Mail\Markdown::parse($contents) !!}
 @endsection
 

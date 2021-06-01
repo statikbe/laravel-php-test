@@ -6,16 +6,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+<div align="center">
 
-## Laravel Test
+# Laravel Test
 
-### Initiële setup
+## Initiële setup
 - Zet het project op in je lokale development omgeving.
 - Doe de nodige setup (`key:generate`, `migrate`, `db:seed` .)
 - Bovenstaande zal al een paar zaken klaarzetten die je nodig hebt.
 
 
-### Setup Bugfix pagina
+## Setup Bugfix pagina
 Doe enkel bugfixes op de volgende url tot je een werkende pagina krijgt:
 [Bugfix pagina](/bugfix)
 
@@ -31,3 +32,4 @@ Doe enkel bugfixes op de volgende url tot je een werkende pagina krijgt:
 ## Advanced [extra documentatie](documentation/advanced.md)
 - Schrijf een geautomatiseerde job
 - Schijf enkele tests die moeten valideren
+</div>

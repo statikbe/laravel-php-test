@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Laravel Test">
 
-    <title>Laravel </title>
+    <title>Laravel | {{ $title ?? 'Hello' }}</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -40,9 +40,9 @@
         <div class="section section--xsm section--light u-hide@xlr">
             <div class="container">
                 <div class="flex flex-justify-center">
-                    <a href="{{route('home.index')}}" class="page-header__logo">
-                        LOGO
-                    </a>
+{{--                    <a href="{{route('home.index')}}" class="page-header__logo">--}}
+{{--                        HOME--}}
+{{--                    </a>--}}
                 </div>
                 @include('partials.menu')
             </div>
