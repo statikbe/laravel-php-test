@@ -6,8 +6,10 @@ use App\Models\Employee;
 use App\Models\MeetingRoom;
 use App\Models\ScheduledMeeting;
 use App\Models\MeetingAttendees;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,6 +20,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
         //First Truncate all and start fresh
         DB::table('employees')->truncate();
         DB::table('meeting_rooms')->truncate();
@@ -31,29 +34,43 @@ class DatabaseSeeder extends Seeder
         //Seed scheduled meetings
         DB::table('scheduled_meetings')->insert([
             'id' => 1,
+            'title' => 'New year',
+            'description' => 'Welcome to ' . Carbon::now()->year,
+            'status' => 'passed',
+            'meeting_room_id' => 1,
+            'date_start' => Carbon::now()->setDay(1)->setMonth(1)->setHour(0),
+            'date_stop' => Carbon::now()->setDay(1)->setMonth(1)->setHour(2),
+            'organizer_id' => 4,
+            'created_at' => Carbon::now()->setDay(20)->setMonth(12)->subYear(),
+            'updated_at' => Carbon::now()->setDay(20)->setMonth(12)->subYear(),
+        ]);
+        DB::table('scheduled_meetings')->insert([
+            'id' => 2,
             'title' => 'INTLAR',
             'description' => 'Meeting about internal Laravel development.',
             'status' => 'planned',
             'meeting_room_id' => 1,
-            'date_start' => '2021-04-18 12:00:00',
-            'date_stop' => '2021-04-18 13:00:00',
+            'date_start' => Carbon::now()->addDays(5)->setHour(12),
+            'date_stop' => Carbon::now()->addDays(5)->setHour(14),
             'organizer_id' => 4,
-            'created_at' => '2021-04-16 16:00:00',
-            'updated_at' => '2021-04-16 16:00:00'
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
 
         DB::table('scheduled_meetings')->insert([
-            'id' => 2,
+            'id' => 3,
             'title' => 'Weekly meeting',
             'description' => 'Meeting used to talk about everything that has been going on: issues, questions, planning, etc.',
             'status' => 'planned',
             'meeting_room_id' => 3,
-            'date_start' => '2021-04-20 12:00:00',
-            'date_stop' => '2021-04-20 13:00:00',
+            'date_start' => Carbon::now()->addDays(8)->setHour(12),
+            'date_stop' => Carbon::now()->addDays(8)->setHour(14),
             'organizer_id' => 10,
-            'created_at' => '2021-04-16 16:00:00',
-            'updated_at' => '2021-04-16 16:00:00'
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
+
+        Schema::enableForeignKeyConstraints();
 
 
     }

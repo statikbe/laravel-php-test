@@ -16,11 +16,10 @@ Zorg ervoor dat de volgende relaties correct zijn gelegd door middel van foreign
 - voor `schedules_meetings`:
     - belongsTo met `meeting_rooms` voor `meeting_room_id`
     - belongsTo met `employees` voor `organizer_id`
-    
-Daarna creëer je zelf nog een linktabel om personen te kunnen koppelen aan `scheduled_meetings`
-- Deze noem je `scheduled_meetings_participants`
-- zorgt voor de juiste koppeling door middel van foreign keys
+- zelfde case voor `meeting_attendees` tabel. Bekijk zelf welke foreign keys nodig zijn.    
 
+- Voor aanpassingen aan huidige kolommen binnen een tabel kan je gebruik maken van een bestaalde package.
+Deze kan je installeren met Composer -> `doctrine/dbal`
 
 ## Blade componenten
 Nu de koppelingstabel tussen je relaties correct gelegd is.

@@ -14,7 +14,7 @@ class CreateMeetingAttendeesTable extends Migration
     public function up()
     {
         Schema::create('meeting_attendees', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('employee_id');
             $table->integer('scheduled_meeting_id');
             $table->timestamps();

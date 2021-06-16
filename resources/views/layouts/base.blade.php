@@ -14,7 +14,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-        <link rel="stylesheet" href="/css/main.css" rel="preload">
+{{--        <link rel="stylesheet" href="/css/main.css" rel="preload">--}}
 
         <![endif]-->
         <link rel="icon" type="image/png" href="/img/favicon.png" rel="preload">
@@ -84,7 +84,7 @@
     };
 </script>
 
-<script type="text/javascript" src="/js/main.js"></script>
+{{--<script type="text/javascript" src="/js/main.js"></script>--}}
 
 @stack('javascript')
 

@@ -14,7 +14,7 @@ class CreateScheduledMeetingsTable extends Migration
     public function up()
     {
         Schema::create('scheduled_meetings', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('title');
             $table->text('description');
             $table->string('status');
