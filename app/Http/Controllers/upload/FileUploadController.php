@@ -11,7 +11,12 @@ class FileUploadController extends Controller
     {
 
         return view('pages.files.index');
+    }
 
+    public function create()
+    {
+
+        return view('pages.files.create');
     }
 
     public function store(Request $request)

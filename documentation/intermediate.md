@@ -14,14 +14,19 @@ Dit gebeurt op basis van medewerker keuze en dan een file upload.
 
 Hiervoor werd al een controller en template voorzien.
 - FileUploadController
-- pages/file-upload.blade.php
+- pages/files/**
+
+Je maakt een overzichtspagina van alle werknemers met een afbeelding (wanneer deze niet aanwezig is geef je een default avatar).
+
 
 
 ## Gebruik van API
 Schrijf een randomizer die op basis van een api call een svg afbeelding inlaadt en opslaat in de folder __avatars__. Dezelfde avatar mag maar 1 maal voorkomen.
+
+De manier waarop je dit genereert bepaal je helemaal zelf. Dit mag met een knop, maar evengoed ook met een job die op de achtergrond loopt of via een schedule dat om de x-aantal tijd loopt.
 - Te gebruiken API: [Dicebear.com](https://avatars.dicebear.com/docs/http-api)
 - Avatarcontroller
-- pages/api-data.blade.php
+- pages/index.blade.php
 
 
 ### [Terug naar overzicht](/)

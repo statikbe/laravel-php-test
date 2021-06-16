@@ -9,8 +9,10 @@
 <div align="center">
 
 ## Geautomatiseerde job
-Schrijf een job die om de x-aantal tijd een export (Excel of csv) neemt van elke meeting room met alle aanwezig personen
+Schrijf een job die om de x-aantal tijd een export (Excel of csv) neemt van elke meeting room met alle aanwezig personen voor de eerst volgende week
 en dit in een mail verstuurd. Dit mag enkel gebeuren voor meetings die nog moeten plaatsvinden.
+
+Je gaat vooraf nog een seeder moeten voorzien om enkele toekomstige meeting rooms te voorzien van data. 
 
 - Schrijft dit zo logisch mogelijk met een logische structuur.
 - Voor het versturen kan je bijvoorbeeld gebruik maken van [Mailhog](https://github.com/mailhog/MailHog).

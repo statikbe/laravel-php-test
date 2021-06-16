@@ -12,12 +12,14 @@
 
 ## Initiële setup
 - Zet het project op in je lokale development omgeving.
-- Doe de nodige setup (`key:generate`, `migrate`, `db:seed` .)
+- Doe de nodige setup (`key:generate`, `migrate`, `db:seed`, etc.)
 - Bovenstaande zal al een paar zaken klaarzetten die je nodig hebt.
 
 
 ## Setup Bugfix pagina
 Doe enkel bugfixes op de volgende url tot je een werkende pagina krijgt:
+- Volg alle mogelijke stappen om een werkende pagina te bekomen.
+
 [Bugfix pagina](/bugfix)
 
 ## Beginner [extra documentatie](documentation/beginner.md)
@@ -26,7 +28,7 @@ Doe enkel bugfixes op de volgende url tot je een werkende pagina krijgt:
 - Gebruik voor bovenstaande, vrijblijvend, een package die je hierin kan helpen.
 
   
-## Medium [extra documentatie](documentation/medium.md)
+## Intermediate [extra documentatie](documentation/intermediate.md)
 - Schrijf een file upload en mogelijkheid tot beheren van afbeeldingen. Je mag hiervoor gebruik maken van een externe library
 - Gebruik een API om data op te halen.
 ## Advanced [extra documentatie](documentation/advanced.md)

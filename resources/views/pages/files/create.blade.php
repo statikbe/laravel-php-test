@@ -2,20 +2,20 @@
 @section('content_header')
     <div class="panel panel--light">
         <div class="panel__header">
-            <h1 class="panel__title">Overzicht afbeeldingen</h1>
+            <h1 class="panel__title">Files upload</h1>
         </div>
     </div>
 @endsection
 
 @section('content_body')
-<div class="container">
-    <div>
+    <div class="container">
+        <div>
 
-    </div>
+        </div>
 
-    <div>
-        @include('partials.files.upload-form')
+        <div>
+            @include('partials.files.upload-form')
+        </div>
     </div>
-</div>
 @endsection
 
